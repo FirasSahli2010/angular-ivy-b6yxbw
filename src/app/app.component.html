@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form
+    [model]="model"
+    [fields]="fields"
+    [options]="options"
+    [form]="form"
+  >
+    <button type="submit" style="color: red; background-color: blue;">Submit</button>
+    <button
+      type="button"
+      style="color: red; background-color: blue;"
+      (click)="options.resetModel()"
+    >
+      Reset
+    </button>
+  </formly-form>
+</form>
+
+{{ model | json }}
